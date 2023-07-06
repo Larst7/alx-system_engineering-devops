@@ -1,2 +1,2 @@
 #!/bin/bash
-ls -l file.txt
+ln -s /bin/ls  _ ls_
