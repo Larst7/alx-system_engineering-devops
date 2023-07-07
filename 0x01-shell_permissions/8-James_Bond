@@ -1,3 +1,4 @@
 #!/bin/bash
-chmod 007 hell
+# Set permissions for the file "hello"
+chmod 0 hello
 chmod u=rw,g=,o=rwx hello
