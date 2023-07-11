@@ -1,2 +1,2 @@
-#!/bin/bash
-IFS=':' read -ra path_dirs <<< "$PATH"; echo "${#path_dirs[@]}"
+#!/bin/bash 
+echo "${#path_dirs[@]}"
