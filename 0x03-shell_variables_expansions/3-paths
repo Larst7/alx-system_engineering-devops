@@ -1,2 +1,2 @@
 #!/bin/bash
-echo "$num_dirs"
+IFS=':' read -ra path_dirs <<< "$PATH"; echo "${#path_dirs[@]}"
