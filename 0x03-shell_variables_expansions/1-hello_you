@@ -1,2 +1,2 @@
 #!/bin/bash
-current_user=$(id -un)|echo "Hello $MyUser!"
+echo "hello MyUser"
