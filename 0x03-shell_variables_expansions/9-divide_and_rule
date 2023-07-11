@@ -1,3 +1,2 @@
 #!/bin/bash
-echo 2
-echo 12
+echo $(($2 / $12))
