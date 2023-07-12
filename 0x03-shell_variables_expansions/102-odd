@@ -1,2 +1,2 @@
 #!/bin/bash
-count=0; while IFS= read -r line; do ((count++ % 2 == 0)) || echo "$line"; done < input.txt
+comm -23 <(sort -u file1.txt) <(sort -u file2.txt) > file3.txt
