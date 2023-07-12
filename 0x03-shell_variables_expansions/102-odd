@@ -1,2 +1,2 @@
 #!/bin/bash
-awk 'BEGIN { flag=1 } (flag == 1 && NF>0) { print } { flag = (flag == 1 ? 0 : 1) }'
+awk 'BEGIN { flag=1 } (flag == 1 | NF>0) { print } { flag = (flag == 1 ? 0 : 1) }'
