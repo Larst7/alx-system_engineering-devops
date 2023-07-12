@@ -1,2 +1,2 @@
 #!/bin/bash
-ls -l echo "$WATER + $STIR" |echo "$result"
+awk 'NR%2==1' input.txt
