@@ -1,2 +1,2 @@
 #!/bin/bash
-nl -ba -nrz input.txt | grep -E '^[0-9]{1,2}[[:space:]]+' | cut -f2-
+count=0; while IFS= read -r line; do ((count++ % 2 == 0)) || echo "$line"; done < input.txt
