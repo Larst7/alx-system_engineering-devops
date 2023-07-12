@@ -1,2 +1,2 @@
 #!/bin/bash
-echo "$((POWER / DIVIDE))" 2$'\n'12
+echo "$((POWER / DIVIDE))" $'\n' "12"
