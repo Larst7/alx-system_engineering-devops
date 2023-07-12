@@ -1,2 +1,2 @@
 #!/bin/bash
-awk 'BEGIN { flag=1 } flag { if (NF > 0) { print } flag=0; next } { flag=1 }'
+awk
