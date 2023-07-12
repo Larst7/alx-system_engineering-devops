@@ -1,2 +1,2 @@
 #!/bin/bash
-awk 'NR%2==1' input.txt
+head -n $(($(wc -l < input.txt) / 2 + 1)) input.txt | tail -n +1
