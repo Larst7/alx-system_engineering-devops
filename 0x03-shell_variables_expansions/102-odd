@@ -1,2 +1,2 @@
 #!/bin/bash
-sed -n '1~2p'
+head -n $(($(wc -l < input.txt) / 2 + 1)) input.txt | tail -n +1
