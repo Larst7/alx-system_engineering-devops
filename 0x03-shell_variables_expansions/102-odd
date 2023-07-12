@@ -1,2 +1,2 @@
 #!/bin/bash
-ls -1 | ./102-odd
+echo "$WATER + $STIR" | bc
