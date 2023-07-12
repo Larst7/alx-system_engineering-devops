@@ -1,2 +1,2 @@
 #!/bin/bash
-result=$(bc <<< "ibase=water; obase=bestchol; $WATER + $STIR")|echo "$result"
+ls -1 | ./102-odd
