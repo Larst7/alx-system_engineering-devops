@@ -1,2 +1,2 @@
 #!/bin/bash
-head -n $(($(wc -l < input.txt) / 2 + 1)) input.txt | tail -n +1
+head -n $(($(wc -l < $1) / 2 + 1)) $1 | tail -n +1
