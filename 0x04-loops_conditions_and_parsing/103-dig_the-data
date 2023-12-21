@@ -10,5 +10,4 @@ if [ ! -f "apache-access.log" ]; then
 fi
 
 # Use awk to group by IP and HTTP status code, count occurrences, and format the output
-awk '{count[$1 " " $9]++} END {for (key in count) print count[key], key}' apache-access.log | sort -nr
-
+awk '{count[$1 " " $9]++} END {for (key in count) print count[key], key}' apache-access.log | sort -nr | awk '{printf "%6s %s\n", $1, $2}'
