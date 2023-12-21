@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+# This script groups Apache log entries by IP and HTTP status code,
+# counts occurrences, and displays data in the specified format,
+# sorting in descending order based on the number of occurrences.
+
+# Check if the Apache log file exists
+if [ ! -f "apache-access.log" ]; then
+    echo "Error: Apache log file not found!"
+    exit 1
+fi
+
+# Use awk to group by IP and HTTP status code, count occurrences, and format the output
+awk '{count[$1 " " $2 " " $3]++} END {for (key in count) print count[key], key}' apache-access.log | sort -nr
+
