@@ -1,4 +1,4 @@
-!/usr/bin/env bash
+#!/usr/bin/env bash
 # check for the correct amount of argument
 if [ -z "$1" ]
 then
