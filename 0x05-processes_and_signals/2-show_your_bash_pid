@@ -1,5 +1,4 @@
-!/usr/bin/env bash
-# Using your previous exercise command, write a Bash
-# script that displays lines containing the bash word,
-# thus allowing you to easily get the PID of your Bash process.
-ps auxf | grep  bash
+#!/usr/bin/env bash
+# Lists all processes for all users, including those without a TTY
+# shellcheck disable=SC2009
+ps auxf | grep "bash"
