@@ -1,1 +1,24 @@
-Lets see
+#!/bin/bash
+
+# Get the process IDs of the Gunicorn master and workers
+master_pid=$(ps aux | grep '[g]unicorn' | awk '{print $2}')
+worker_pids=$(pgrep -P $master_pid)
+
+# Print the process IDs for verification
+echo "Master PID: $master_pid"
+echo "Worker PIDs: $worker_pids"
+
+# Send SIGUSR2 signal to the Gunicorn master process to gracefully reload
+kill -s SIGUSR2 $master_pid
+
+# Wait for the workers to finish processing requests and shutdown gracefully
+sleep 5
+
+# Verify if new workers have been started
+new_worker_pids=$(pgrep -P $master_pid)
+
+if [ -z "$new_worker_pids" ]; then
+    echo "No new workers started. Reload failed."
+else
+    echo "New worker PIDs: $new_worker_pids"
+fi
